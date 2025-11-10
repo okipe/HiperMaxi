@@ -40,7 +40,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public ClienteDTO obtenerClientePorDni(String dni) {
-        Optional<Cliente> cliente = clienteRepository.findByDNI(dni);
+        Optional<Cliente> cliente = clienteRepository.findByDni(dni);
         return cliente.map(ClienteMapper.instancia::clienteAClienteDTO).orElse(null);
     }
 
